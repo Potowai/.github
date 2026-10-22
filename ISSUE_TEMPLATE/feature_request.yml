@@ -1,0 +1,36 @@
+name: Feature request
+description: Proposer une amélioration ou une nouvelle fonctionnalité
+title: "[FEAT] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Le problème
+      description: Quel manque constatez-vous ? Partir du problème, pas de la solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposition
+      description: Comment imaginez-vous que cela fonctionne ? Un exemple concret vaut mieux qu'une longue explication.
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Portée
+      options:
+        - Petit — correctif ou ajustement local
+        - Moyen — nouvelle fonctionnalité sur un module existant
+        - Grand — refonte ou nouveau sous-système
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives envisagées
+      description: Avez-vous trouvé un contournement ? Quelle autre approche avez-vous envisagée ?
+    validations:
+      required: false

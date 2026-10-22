@@ -1,0 +1,48 @@
+name: Bug report
+description: Signaler un comportement inattendu
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Que se passe-t-il ?
+      description: Décrivez le comportement observé, en incluant les étapes pour le reproduire.
+      placeholder: |
+        1. J'ouvre ...
+        2. Je clique sur ...
+        3. J'obtiens ... alors que j'attendais ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement attendu
+      description: Ce qui devrait se passer à la place.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs ou captures d'écran
+      description: Collez ici la sortie console ou une capture. Retirez toute donnée sensible.
+      render: shell
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Environnement
+      description: OS, version de l'application, version de Python/Node, navigateur.
+      placeholder: macOS 15.3, Chrome 133, Node 22
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Vérifications
+      options:
+        - label: J'ai cherché si ce bug existait déjà dans les issues.
+          required: true
+        - label: J'ai lu la documentation et mon cas n'y figure pas.
+          required: false
